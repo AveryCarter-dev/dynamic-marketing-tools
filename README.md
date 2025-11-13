@@ -4,7 +4,7 @@ A curated collection of tools and APIs that allow you to **update, personalize, 
 
 > 🎯 From dynamic QR codes to smart links and personalized landing pages.
 
-🌐 **View the website:** <a href="https://AveryCarter-dev.github.io/dynamic-marketing-tools" target="_blank">Live Site</a>
+🌐 **View the website:** <a href="https://AveryCarter-dev.github.io/dynamic-marketing-tools" target="_blank"><strong>Live Site</strong></a>
 
 ---
 
