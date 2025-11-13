@@ -1,0 +1,234 @@
+---
+import { categories } from '../data/tools';
+import CategorySection from '../components/CategorySection.astro';
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A curated collection of tools and APIs that allow you to update, personalize, or track marketing elements dynamically." />
+    <title>🧠 Awesome Dynamic Marketing Tools</title>
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <h1 class="title">
+          <span class="title-emoji">🧠</span>
+          <span class="title-text">Awesome Dynamic Marketing Tools</span>
+        </h1>
+        <p class="subtitle">
+          A curated collection of tools and APIs that allow you to <strong>update, personalize, or track marketing elements dynamically</strong>.
+        </p>
+        <p class="tagline">🎯 From dynamic QR codes to smart links and personalized landing pages.</p>
+      </header>
+
+      <div class="categories">
+        {categories.map((category) => (
+          <CategorySection category={category} />
+        ))}
+      </div>
+
+      <footer class="footer">
+        <p>
+          <a href="https://github.com" class="footer-link">Contributing Guide</a> • 
+          <a href="https://github.com" class="footer-link">License: MIT</a>
+        </p>
+        <p class="footer-note">
+          Do not include third-party source code without permission — instead, link to APIs or use documented public examples.
+        </p>
+      </footer>
+    </main>
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --bg-color: #fafafa;
+    --text-color: #1a1a1a;
+    --text-secondary: #666;
+    --heading-color: #000;
+    --link-color: #0066cc;
+    --link-hover-color: #004499;
+    --link-visited-color: #551a8b;
+    --border-color: #ddd;
+    --warning-bg: #fff3cd;
+    --warning-border: #ffc107;
+    --warning-text: #856404;
+    --font-family: 'Courier New', 'Monaco', 'Menlo', monospace;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-family, 'Courier New', 'Monaco', 'Menlo', monospace);
+    padding: 2rem 1rem;
+    min-height: 100vh;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    width: 100%;
+  }
+
+  .header {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--border-color);
+  }
+
+  .title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--heading-color);
+  }
+
+  .title-emoji {
+    font-size: 1.2em;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 0.75rem;
+    color: var(--text-color);
+  }
+
+  .tagline {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    font-style: italic;
+  }
+
+  .categories {
+    margin-bottom: 3rem;
+  }
+
+  .footer {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 2px solid var(--border-color);
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+  }
+
+  .footer-link {
+    color: var(--link-color);
+    text-decoration: none;
+  }
+
+  .footer-link:hover {
+    text-decoration: underline;
+  }
+
+  .footer-note {
+    margin-top: 0.75rem;
+    font-size: 0.85rem;
+    font-style: italic;
+  }
+
+  /* Tablet */
+  @media (max-width: 1024px) {
+    .container {
+      padding: 0 1.5rem;
+    }
+
+    .title {
+      font-size: 2.25rem;
+    }
+  }
+
+  /* Mobile */
+  @media (max-width: 768px) {
+    html {
+      font-size: 15px;
+    }
+
+    body {
+      padding: 1rem 0.75rem;
+    }
+
+    .container {
+      padding: 0 1rem;
+    }
+
+    .header {
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+    }
+
+    .title {
+      font-size: 1.75rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .title-emoji {
+      font-size: 1em;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .tagline {
+      font-size: 0.95rem;
+    }
+
+    .footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      font-size: 0.85rem;
+    }
+
+    .footer-note {
+      font-size: 0.8rem;
+    }
+  }
+
+  /* Small mobile */
+  @media (max-width: 480px) {
+    html {
+      font-size: 14px;
+    }
+
+    body {
+      padding: 0.75rem 0.5rem;
+    }
+
+    .container {
+      padding: 0 0.75rem;
+    }
+
+    .title {
+      font-size: 1.5rem;
+    }
+
+    .subtitle {
+      font-size: 0.95rem;
+    }
+
+    .tagline {
+      font-size: 0.9rem;
+    }
+  }
+</style>

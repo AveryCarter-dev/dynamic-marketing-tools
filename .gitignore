@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Build output
+dist/
+.output/
+
+# Environment
+.env
+.env.production
+
+# System
+.DS_Store
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# Astro
+.astro/
+
+# Ignore parent directories
+../
+

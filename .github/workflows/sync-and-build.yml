@@ -1,0 +1,39 @@
+name: Sync and Build
+
+on:
+  push:
+    paths:
+      - 'README.md'
+      - 'tools/**'
+  workflow_dispatch:
+
+jobs:
+  sync-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+          cache-dependency-path: website/package-lock.json
+      
+      - name: Install dependencies
+        working-directory: ./website
+        run: npm ci
+      
+      - name: Sync tools from README
+        working-directory: ./website
+        run: npm run sync
+      
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add website/src/data/tools.ts
+          git diff --staged --quiet || git commit -m "chore: sync tools from README [skip ci]"
+          git push
+

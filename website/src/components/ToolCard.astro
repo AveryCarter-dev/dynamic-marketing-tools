@@ -1,0 +1,160 @@
+---
+import type { Tool } from '../data/tools';
+
+interface Props {
+  tool: Tool;
+}
+
+const { tool } = Astro.props;
+---
+
+<article class="tool-card">
+  <h3 class="tool-name">
+    <a href={tool.url} target="_blank" rel="noopener noreferrer" class="tool-link">
+      {tool.emoji && <span class="tool-emoji">{tool.emoji}</span>}
+      <span class="tool-name-text">{tool.name}</span>
+      <span class="external-icon">↗</span>
+    </a>
+  </h3>
+  <p class="tool-description">{tool.description}</p>
+  {tool.warning && (
+    <p class="tool-warning">⚠️ <em>{tool.warning}</em></p>
+  )}
+</article>
+
+<style>
+  .tool-card {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .tool-card:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .tool-name {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  .tool-link {
+    color: var(--link-color);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.2s ease;
+  }
+
+  .tool-link:hover {
+    color: var(--link-hover-color);
+    text-decoration: underline;
+  }
+
+  .tool-link:visited {
+    color: var(--link-visited-color);
+  }
+
+  .tool-emoji {
+    font-size: 1.1em;
+  }
+
+  .tool-name-text {
+    flex: 1;
+  }
+
+  .external-icon {
+    font-size: 0.9em;
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+  }
+
+  .tool-link:hover .external-icon {
+    opacity: 1;
+  }
+
+  .tool-description {
+    margin: 0.5rem 0;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  .tool-warning {
+    margin: 0.75rem 0 0 0;
+    padding: 0.5rem;
+    background: var(--warning-bg);
+    border-left: 3px solid var(--warning-border);
+    color: var(--warning-text);
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  /* Tablet */
+  @media (max-width: 1024px) {
+    .tool-card {
+      margin-bottom: 1.25rem;
+      padding-bottom: 1.25rem;
+    }
+
+    .tool-name {
+      font-size: 1.15rem;
+    }
+  }
+
+  /* Mobile */
+  @media (max-width: 768px) {
+    .tool-card {
+      margin-bottom: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    .tool-name {
+      font-size: 1.1rem;
+    }
+
+    .tool-link {
+      gap: 0.4rem;
+      flex-wrap: wrap;
+    }
+
+    .tool-description {
+      font-size: 0.95rem;
+      margin: 0.4rem 0;
+    }
+
+    .tool-warning {
+      font-size: 0.85rem;
+      padding: 0.4rem;
+    }
+  }
+
+  /* Small mobile */
+  @media (max-width: 480px) {
+    .tool-card {
+      margin-bottom: 0.875rem;
+      padding-bottom: 0.875rem;
+    }
+
+    .tool-name {
+      font-size: 1rem;
+    }
+
+    .tool-link {
+      gap: 0.35rem;
+    }
+
+    .tool-description {
+      font-size: 0.9rem;
+    }
+
+    .tool-warning {
+      font-size: 0.8rem;
+      padding: 0.35rem;
+    }
+  }
+</style>
+
