@@ -10,7 +10,7 @@ const { tool } = Astro.props;
 
 <article class="tool-card">
   <h3 class="tool-name">
-    <a href={tool.url} target="_blank" rel="noopener noreferrer" class="tool-link">
+    <a href={tool.url} target="_blank" class="tool-link">
       {tool.emoji && <span class="tool-emoji">{tool.emoji}</span>}
       <span class="tool-name-text">{tool.name}</span>
       <span class="external-icon">↗</span>
