@@ -26,7 +26,7 @@ export const categories: Category[] = [
     tools: [
       {
         name: "QRNow",
-        url: "https://qrnow.com",
+        url: "https://www.qrnow.com",
         description: "Dynamic QR code generator with built-in tracking (SaaS).",
         emoji: "🧠",
         category: "Dynamic QR Codes",
