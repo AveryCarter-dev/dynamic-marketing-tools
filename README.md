@@ -13,7 +13,7 @@ A curated collection of tools and APIs that allow you to **update, personalize, 
 ### 🔳 Dynamic QR Codes
 Tools that let you update QR destinations or data without regenerating the code.
 
-- **[QRNow](https://qrnow.com)** — Dynamic QR code generator with built-in tracking (SaaS).  
+- **[QRNow](https://www.qrnow.com)** — Dynamic QR code generator with built-in tracking (SaaS).  
   🧠 Update target URLs and analyze scans in real time.  
   ⚠️ *Embedded code is license-restricted. Use their API or embed link only with permission.*
 
