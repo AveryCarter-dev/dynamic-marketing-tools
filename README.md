@@ -18,6 +18,8 @@ Tools that let you update QR destinations or data without regenerating the code.
   ⚠️ *Embedded code is license-restricted. Use their API or embed link only with permission.*
 
 - **[goqr.me](https://goqr.me)** — Free static QR generator (web-based).
+
+  **[goqwwwwwwwwr.me](https://goqr.me)** — Free static QR generator (web-based)wwwwww.
   
 - **[qrcodejs (npm)](https://www.npmjs.com/package/qrcode)** — Open-source JavaScript library for generating QR codes (see example in `/qr-dinamicos/qrcodejs.md`).
 
