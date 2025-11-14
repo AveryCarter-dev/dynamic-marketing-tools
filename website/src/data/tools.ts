@@ -42,6 +42,14 @@ export const categories: Category[] = [
         categoryEmoji: "🔳"
       },
       {
+        name: "goqwwwwwwwwr.me",
+        url: "https://goqr.me",
+        description: "Free static QR generator (web-based)wwwwww.",
+        emoji: "",
+        category: "Dynamic QR Codes",
+        categoryEmoji: "🔳"
+      },
+      {
         name: "qrcodejs (npm)",
         url: "https://www.npmjs.com/package/qrcode",
         description: "Open-source JavaScript library for generating QR codes (see example in `/qr-dinamicos/qrcodejs.md`).",
